@@ -5,7 +5,7 @@ image: img/nodeyellow.png
 author: Ghost
 date: 2018-04-14T14:28:10.149Z
 tags: 
-  - Tests
+  - Babel
 ---
 
 近年来，ES6+ 越来越热，各大浏览器和 node.js 对于该标准的支持度也越来越高，ES6+ 有很多新的特性，也提供了更多的 API，可以说它对 ES5 进行了很大的改善，使开发人员更好的使用 JavaScript。虽然现阶段 node.js 新版本支持大部分的 ES6+ 特性，但还是不能直接使用全部的 ES6+ 语法来编写程序直接运行，例如无法使用下面的代码：

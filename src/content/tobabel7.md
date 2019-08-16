@@ -5,7 +5,7 @@ image: img/babel.jpg
 author: Ghost
 date: 2019-05-14 12:13:10
 tags: 
-  - Tests
+  - Babel
 ---
 
 前一段时间，给公司的 web 项目做优化，babel 版本打算升级到 7，升级的过程中遇到了一些问题，所以在此写一下解决的过程，首先看一下 npm 包的处理：

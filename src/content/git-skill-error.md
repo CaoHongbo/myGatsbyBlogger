@@ -10,16 +10,15 @@ tags:
 
 #### Git 简化命令
 举个例子，你现在要执行一个命令，命令很长，很难记：
+```bash
+git log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset'
 ```
-git log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset '
-```
-通过简化命令我们可以给这个命令起一个别名，例如叫 `git lg`，这样我们每次执行这个命令就相当于执行上面的命令了。简化命令非常简单方便快捷，所以对于我们实际的开发还是有很大的帮助的，下面介绍两种方法实现简化命令。
-假如我们现在想设置简化命令，把 `git status` 简化成 `git st`，可以直接执行：
-```
+通过简化命令我们可以给这个命令起一个别名，例如叫 `git lg`，这样我们每次执行这个命令就相当于执行上面的命令了。简化命令非常简单方便快捷，所以对于我们实际的开发还是有很大的帮助的，下面介绍两种方法实现简化命令。假如我们现在想设置简化命令，把 `git status` 简化成 `git st`，可以直接执行：
+```bash
 git config --global alias.st status
 ```
-除了上面的方法，我们还可以直接修改配置文件（<samp>~/.gitconfig</samp>）来设置简化命令：
-```
+除了上面的方法，我们还可以直接修改配置文件（_~/.gitconfig_）来设置简化命令：
+```bash
 [alias]
         st = status -s -b
         br = branch -a
@@ -52,7 +51,7 @@ git branch --set-upstream-to=origin/master master
 
 #### Git clean
 
-该命令主要是清除 Git 中未跟踪的文件（<samp>untracked files</samp>），比如我们在开发的过程中经常会编译文件，这个时候会生成很多的无用文件，这些文件对于 Git 来说就是未跟踪的，这些无用的文件我们要经常性的清除，或者把他们加入 <samp>.gitignore</samp> 文件中，下面会介绍一种简单快捷的方式清除这些文件，那就是 `git clean`
+该命令主要是清除 Git 中未跟踪的文件（_untracked files_），比如我们在开发的过程中经常会编译文件，这个时候会生成很多的无用文件，这些文件对于 Git 来说就是未跟踪的，这些无用的文件我们要经常性的清除，或者把他们加入 _.gitignore_ 文件中，下面会介绍一种简单快捷的方式清除这些文件，那就是 `git clean`
 
 ```bash
 git clean -fd
