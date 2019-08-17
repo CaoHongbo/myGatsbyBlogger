@@ -209,9 +209,8 @@ after_script:
 #### CI执行
 当你的项目push以后，travis会自动执行相关命令
 
-![自动执行](https://upload-images.jianshu.io/upload_images/3354595-5b64d30a8942c232.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-![执行成功](https://upload-images.jianshu.io/upload_images/3354595-261feee77049d116.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+<img src="https://upload-images.jianshu.io/upload_images/3354595-5b64d30a8942c232.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="width:100%" alt="自动执行">
+<img src="https://upload-images.jianshu.io/upload_images/3354595-261feee77049d116.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="width:100%" alt="执行成功">
 
 大功告成！！如果您有不懂的地方，可以查看官方文档，也可以联系我哦！
 
