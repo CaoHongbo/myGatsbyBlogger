@@ -14,7 +14,7 @@ tags:
 
 我们可以看到，把之前 babel 相关的版本全部卸载了，然后安装 babel7 相关的包
 
-```nohighlight
+```
 npm install --save @babel/polyfills
 npm install --save-dev @babel/core @babel/cli @babel/preset-env
 ```
