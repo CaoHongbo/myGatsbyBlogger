@@ -49,6 +49,12 @@ git branch --set-upstream-to=origin/master master
 
 ---
 
+#### Git 错误：git filename too long
+
+解决方案：`git config --global core.longpaths true`
+
+---
+
 #### Git clean
 
 该命令主要是清除 Git 中未跟踪的文件（_untracked files_），比如我们在开发的过程中经常会编译文件，这个时候会生成很多的无用文件，这些文件对于 Git 来说就是未跟踪的，这些无用的文件我们要经常性的清除，或者把他们加入 _.gitignore_ 文件中，下面会介绍一种简单快捷的方式清除这些文件，那就是 `git clean`
@@ -64,6 +70,23 @@ git clean -fdi # 加上-i参数 --interactive
 ```
 `-i` 表示进入交互界面，在里面可以选择要删除的文件进行删除，可以参考下图的操作，非常简单
 
-![git clean](https://upload-images.jianshu.io/upload_images/3354595-e389a4d6d7768447.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+<img src="https://i.loli.net/2019/08/17/m2bRMdWr378VigB.png" style="width:100%" alt="git clean">
 
 以上介绍的是个人最常用到的 `git clean` 方法，如果您想详细的了解该命令，请参考 [Git git-clean 文档](https://www.git-scm.com/docs/git-clean)
+
+---
+
+#### 常用命令
+* 如果您的 commit 很多，你想查找固定提交信息（比如：你好）的 commit，可以使用 `git log --grep=你好`
+* 有的时候在本地无法及时更新远程分支，可以使用 `git remote update origin --prune`
+* 查看缓冲区文件改动 `git diff app.js`
+* 修改最近一次 commit 的描述信息 `git commit --amend`
+* 删除远程分支（比如：test）`git push origin :test`
+* clone 的时候默认克隆的是 master 分支，如果想克隆其他分支（比如：dev），可以使用 `git clone -b dev [地址]`
+* clone 的时候如果想改文件夹的名字（比如改成：loli），可以使用 `git clone [地址] loli`
+* 如果想根据现有的分支（比如：dev）创建一个新的远程分支（比如：dev-test），可以使用 `git push origin dev:dev-test`，然后把这个分支拉到本地使用 `git checkout -b dev-test origin/dev-test`
+
+--- 
+
+#### 总结
+以上就是作者在工作中经常用到的一些命令，其实上面的种种不需要死记硬背，只要理解了 Git 的工作流原理，很多命令可以理解性地去记忆，你会发现这些东西其实都是很 easy 的，加油，共勉！

@@ -9,7 +9,9 @@ tags:
 ---
 
 前一段时间，给公司的 web 项目做优化，babel 版本打算升级到 7，升级的过程中遇到了一些问题，所以在此写一下解决的过程，首先看一下 npm 包的处理：
-![Babel 配置](https://i.loli.net/2019/08/06/STNqCAfIZzk8MmO.png)
+
+<img src="https://i.loli.net/2019/08/06/STNqCAfIZzk8MmO.png" style="width:50%;height:650px">
+
 我们可以看到，把之前 babel 相关的版本全部卸载了，然后安装 babel7 相关的包
 
 ```nohighlight
@@ -17,7 +19,7 @@ npm install --save @babel/polyfills
 npm install --save-dev @babel/core @babel/cli @babel/preset-env
 ```
 
-优化前我们的 <samp>.babelrc</samp> 是这样的：
+优化前我们的 _.babelrc_ 是这样的：
 
 ```json
 {
@@ -34,7 +36,7 @@ npm install --save-dev @babel/core @babel/cli @babel/preset-env
 babel src/ --out-dir app/
 ```
 
-会报错 <mark style="background-color:#ff8063">Error: Plugin/Preset files are not allowed to export objects, only functions ...</mark>，这应该是 babel 升级后，以前的包卸载了造成的，但是我们不想把旧的包再安装回来，所以我们先把 `.babelrc` 改造成
+会报错 <mark style="background-color:#ff8063">Error: Plugin/Preset files are not allowed to export objects, only functions ...</mark>，这应该是 babel 升级后，以前的包卸载了造成的，但是我们不想把旧的包再安装回来，所以我们先把 _.babelrc_ 改造成
 
 ```javascript
 {
@@ -52,7 +54,7 @@ babel src/ --out-dir app/
 }
 ```
 
-可以发现我们的编译过了，但是由于代码不规范，有一些源代码如 `export default xxx`，babel 会转换成 `module.exports.default = xxx`,运行的时候其他地方直接引用这个模块会报错，所以我们需要插件 `add-module-exports`，这个插件会把代码相关代码转化成类似 `module.exports = xxx`，然后改造 `.babelrc` 添加如下配置：
+可以发现我们的编译过了，但是由于代码不规范，有一些源代码如 `export default xxx`，babel 会转换成 `module.exports.default = xxx`,运行的时候其他地方直接引用这个模块会报错，所以我们需要插件 `add-module-exports`，这个插件会把代码相关代码转化成类似 `module.exports = xxx`，然后改造 _.babelrc_ 添加如下配置：
 
 ```javascript
 {
@@ -71,8 +73,8 @@ babel src/ --out-dir app/
 
 - 个人觉得，现在 Node.js 的 LTS 版本对 ES6 的支持已经很高了，其实没必要使用 babel
 - 代码规范很重要，要么就用 Node.js 的 CommonJS Module，要么就用 ES6 Module, 不要两个一起用
-- 为什么没在代码中引用`require('@babel/polyfill')`，因为转码的过程中`targets`是`node`，已经包含了`node.js`所需的运行环境，所以不需要
-- 为什么使用`add-module-exports`插件，请看下面转码后的代码
+- 为什么没在代码中引用 `require('@babel/polyfill')`，因为转码的过程中 `targets` 是 `node`，已经包含了 Node.js 所需的运行环境，所以不需要
+- 为什么使用 `add-module-exports` 插件，请看下面转码后的代码
 
 ```javascript
 'use strict';
