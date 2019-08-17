@@ -5,11 +5,11 @@
   facebook: ghost
   website: https://ghost.org/
   location: On a plane
-- id: Another Author
+- id: 曹某某
   avatar: avatars/ghost.png
-  bio: This is another test author with a profile background image
+  bio: 一个稍微有点文艺的老年程序员
   twitter: TryGhost
   facebook: ghost
-  website: https://ghost.org/
-  location: On a plane
+  website: https://caohongbo.net
+  location: Hangzhou China
   profile_image: img/alex-knight-326705-unsplash.jpg
