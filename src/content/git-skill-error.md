@@ -27,6 +27,19 @@ git config --global alias.st status
 
 ---
 
+#### 回滚文件到指定版本
+在我们使用git时，可能会遇到这种问题：一次提交了多个文件，但是提交后发现有一个文件不应该提交，这时应该怎么办呢？如果把这次提交的commit回滚是不可行的，因为正确提交的文件也会被回滚，这时我们就需要回滚一部分文件，下面介绍回滚部分文件到指定版本的教程
+
+<img src="https://i.loli.net/2019/08/17/2EGus7d9PTyekQS.png" alt="git log hash">
+
+比如我们要回滚 _main.js_ 文件
+
+- `git log main.js` 首先要找到要回滚的版本的 hash 值，图中hash值是 `2d1ed0e066fd9fde6aef913c102fd808e86161fa`
+- `git checkout 2d1ed0 main.js` 利用 hash 回滚特定文件，注意，这里为了方便操作，使用前六位 hash 就可以
+- `git commit -m '回滚main.js'` 回滚后需要提交
+
+---
+
 #### Git 错误：fatel:loose object XXX is corrupt 解决办法
 
 错误描述：
