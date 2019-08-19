@@ -156,11 +156,11 @@ export const PostFullContent = styled.section`
   }
 
   code {
-    padding: 0 5px 2px;
+    padding: 4px 5px;
     font-size: 0.8em;
     line-height: 1em;
     font-weight: 400 !important;
-    background: ${colors.whitegrey};
+    background: #ffe1eb;
     border-radius: 3px;
   }
 
@@ -384,7 +384,7 @@ export const PostFullContent = styled.section`
 
   /* Start Syntax Highlighting */
   /* Taken from overreacted https://github.com/gaearon/overreacted.io/blob/942b41555f5e5ccbb5f93f6c26142cd90b314236/src/utils/global.css#L68 */
-  code[class*='language-'],
+  pre>code[class*='language-'],
   pre[class*='language-'] {
     background: none;
     font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
