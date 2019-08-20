@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Git教程：cherry-pick
-image: img/cherry-picker.jpg
+image: ../img/cherry-picker.jpg
 author: Ghost
 date: 2018-07-14 14:37:41
 tags: 

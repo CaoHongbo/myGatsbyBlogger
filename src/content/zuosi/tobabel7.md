@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 升级 Babel7 小计
-image: img/babel.jpg
+image: ../img/babel.jpg
 author: Ghost
 date: 2019-05-14 12:13:10
 tags: 

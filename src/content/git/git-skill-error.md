@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Git 教程：常用技巧和错误处理
-image: img/git.jpg
+image: ../img/git.jpg
 author: Ghost
 date: 2019-03-14 20:21:13
 tags: 

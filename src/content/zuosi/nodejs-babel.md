@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Node.js 使用 Babel6 完美配置 ES6+
-image: img/nodeyellow.png
+image: ../img/babel.jpg
 author: Ghost
 date: 2018-04-14T14:28:10.149Z
 tags: 

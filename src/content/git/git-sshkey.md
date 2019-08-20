@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Git教程：设置ssh-key
-image: img/git.jpg
+image: ../img/git.jpg
 author: Ghost
 date: 2019-03-14 14:37:07
 tags: 

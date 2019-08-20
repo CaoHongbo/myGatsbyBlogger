@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hexo 博客搭建
-image: img/alex-knight-326705-unsplash.jpg
+image: ../img/alex-knight-326705-unsplash.jpg
 author: Ghost
 date: 2019-07-18 17:34:01
 tags: 
