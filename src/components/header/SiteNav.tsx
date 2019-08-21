@@ -137,17 +137,17 @@ class SiteNav extends React.Component<SiteNavProps> {
             <li role="menuitem">
               <Link to="/">Home</Link>
             </li>
-            <li role="menuitem">
+            {/* <li role="menuitem">
               <Link to="/about">About</Link>
             </li>
             <li role="menuitem">
               <Link to="/tags/getting-started/">Getting Started</Link>
-            </li>
+            </li> */}
           </ul>
         </SiteNavLeft>
         <SiteNavRight>
           <SocialLinks>
-            {config.facebook && (
+            {/* {config.facebook && (
               <a
                 css={SocialLink}
                 href={config.facebook}
@@ -168,7 +168,7 @@ class SiteNav extends React.Component<SiteNavProps> {
               >
                 <Twitter />
               </a>
-            )}
+            )} */}
             {/* {config.weibo && (
               <a
                 css={SocialLink}
@@ -181,9 +181,9 @@ class SiteNav extends React.Component<SiteNavProps> {
               </a>
             )} */}
           </SocialLinks>
-          {config.showSubscribe && (
+          {/* {config.showSubscribe && (
             <SubscribeButton onClick={this.openModal}>Subscribe</SubscribeButton>
-          )}
+          )} */}
           {config.showSubscribe && <SubscribeModal ref={this.subscribe} />}
         </SiteNavRight>
       </nav>
