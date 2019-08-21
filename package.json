@@ -8,7 +8,7 @@
   "scripts": {
     "deploy": "gatsby clean && gatsby build && gh-pages -d public -b master -r git@git.dev.tencent.com:leechee/myGatsbyBlogger.git",
     "build": "gatsby build",
-    "clean": "rimraf public",
+    "clean": "rimraf public .cache",
     "dev": "gatsby develop",
     "lint": "eslint src/**/**/*.tsx",
     "lint:fix": "eslint --fix src/**/*/*.tsx",

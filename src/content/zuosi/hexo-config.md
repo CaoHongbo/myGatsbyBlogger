@@ -150,8 +150,8 @@ next主题也有一个配置文件在 *themes/next/_config.yml*，安装完主�
 2. [Travis官网](https://www.travis-ci.org) 通过 Github 登录
 3. 管理您的项目，也就是您的 Hexo 代码，并配置环境变量
 
-<img src="https://upload-images.jianshu.io/upload_images/3354595-70ba0b4e37fe60ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="width:100%" alt="travis 选择项目">
-<img src="https://upload-images.jianshu.io/upload_images/3354595-0f81a2e46f160acf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="width:100%" alt="travis 选择项目">
+<img src="https://sm.ms/image/FNQ2MSueGrHTqAU" style="width:100%" alt="travis 选择项目">
+<img src="https://sm.ms/image/RYh4zGoDAUrL8pK" style="width:100%" alt="travis 选择项目">
 
 4. 在您的项目下添加 *.travis.yml*
 
@@ -209,8 +209,8 @@ after_script:
 #### CI执行
 当你的项目push以后，travis会自动执行相关命令
 
-<img src="https://upload-images.jianshu.io/upload_images/3354595-5b64d30a8942c232.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="width:100%" alt="自动执行">
-<img src="https://upload-images.jianshu.io/upload_images/3354595-261feee77049d116.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" style="width:100%" alt="执行成功">
+<img src="https://sm.ms/image/X65oL9JKZfOlFiC" style="width:100%" alt="自动执行">
+<img src="https://sm.ms/image/aM16UT8dW4cE5YR" style="width:100%" alt="执行成功">
 
 大功告成！！如果您有不懂的地方，可以查看官方文档，也可以联系我哦！
 
