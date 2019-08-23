@@ -34,6 +34,7 @@ npm install --global --production windows-build-tools
 - `npm root`：查看当前包的安装路径
 - `npm root -g`：查看全局的包的安装路径
 - `npm audit fix`：但是不要用`npm audit fix --force`，这样会导致代码不好用
+- `npm prune`: 清除无用的包
 
 ---
 
@@ -59,7 +60,7 @@ npm install --global --production windows-build-tools
 
 友情提示：
 - 如果你想删除远程仓库，请执行 `npm unpublish <pkg> --force`
-- 不推荐执行 `npm unpublish`，因为官方温馨提示：**It is generally considered bad behavior to remove versions of a library that others are depending on!**。仔细想想就后怕，如果一个公司使用了你的模块，但你丧心病狂的删除了所有模块，这。。。真是拉仇恨必备啊
+- 不推荐执行 `npm unpublish`，因为官方温馨提示：<u>It is generally considered bad behavior to remove versions of a library that others are depending on!</u>。仔细想想就后怕，如果一个公司使用了你的模块，但你丧心病狂的删除了所有模块，这。。。真是拉仇恨必备啊
 - 如果你发布了一个版本，下一次执行 `npm publish` 的时候版本号一定要高于之前的版本号哦
 
 ---
@@ -92,8 +93,17 @@ npm install --global --production windows-build-tools
 
 --- 
 
-#### `dependecies` 和 `devDependecies` 的区别
-<del>其实，说实话，我认为一点区别都没有，</del>这里科普一下他们的区别，`--save` 一般规定把程序运行时需要的 NPM 包存入到 *package.json* 的 `dependencies` 中，而 `--save-dev` 则是将与运行时无关的的 NPM 包存入到`package.json`的 `devDependencies` 中，上面提到的 `mocha` 和 `power-assert` 就属于开发环境需要的依赖（他们只负责单体测试，是独立于项目应用运行的），所以作者用了 `--save-dev` 的参数，当然这里没有硬性的规定，用哪个方案程序都可以正确运行，只是方便开发者管理而已。
+#### dependecies 和 devDependecies 的区别
+<del>其实，说实话，我认为一点区别都没有，</del>这里科普一下他们的区别，`--save` 一般规定把程序运行时需要的 NPM 包存入到 *package.json* 的 `dependencies` 中，而 `--save-dev` 则是将与运行时无关的的 NPM 包存入到`package.json`的 `devDependencies` 中，上面提到的 `mocha` 和 `power-assert` 就属于开发环境需要的依赖（他们只负责单体测试，是独立于项目应用运行的），所以作者用了 `--save-dev` 的参数，当然这里没有硬性的规定，用哪个方案程序都可以正确运行，只是方便开发者管理而已
+
+---
+
+#### 源
+有一些包下载地很慢，我们可以使用淘宝源来加快安装速度
+- 临时替换 `npm --registry https://registry.npm.taobao.org install`
+- 永久替换 `npm config set registry https://registry.npm.taobao.org`
+- 查看源地址 `npm config get registry`
+- 或者使用 cnpm
 
 ---
 
