@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 病态三部曲之打回原形
-image: img/dahuiyuanxing.jpg
+image: ../img/dahuiyuanxing.jpg
 author: Ghost
 date: 2019-08-16T07:03:47.149Z
 tags: 
