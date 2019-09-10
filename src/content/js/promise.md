@@ -4,6 +4,7 @@ title: Promise
 image: ../img/promise.jpg
 author: 曹某某
 date: 2018-03-14 11:43:58
+draft: true
 tags: 
   - JavaScript
 ---

@@ -85,3 +85,6 @@ Edit `gatsby-config.js` section `siteMetadata`
 ## How to adjust pagination
 In `gatsby-node.js`, edit the `postsPerPage` constant. The default value is
 six posts per page.
+
+## 各种问题
+- frontmatter draft 必须得有一篇文章有，不然会报错
