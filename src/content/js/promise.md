@@ -5,7 +5,7 @@ image: ../img/promise.jpg
 author: 曹某某
 date: 2019-09-20 18:27:00
 draft: true
-tags: 
+tags:  
   - JavaScript
 ---
 
@@ -55,6 +55,27 @@ console.log('No.2');
 
 ---
 
+#### Promise 静态方法
+Promise.resolve()
+
+```javascript
+// Promise.resolve() 相当于
+new Promise((resolve, reject) => {
+  resolve();
+})
+```
+
+Promise.reject()
+
+```javascript
+// Promise.reject() 相当于
+new Promise((resolve, reject) => {
+  reject();
+})
+```
+
+---
+
 #### 链式调用
 
 ---
@@ -64,7 +85,6 @@ console.log('No.2');
 ---
 
 #### Promise.all 和 Promise.race
-注明：下面的 `promises` 表示 Promise 实例对象的数组
-- `Promise.all(promises)`：多个 promise 的并发处理，
-- `Promise.race(promises)`：任何一个 promise 对象（不管是 `resolve` 还是 `reject`）只要状态变化，
+- `Promise.all`：分两种情况，一种是 promise 实例对象都变成 `fullfilled` 时，等待全部异步执行完成，才会继续执行；另一种是只要有一个变成 `rejected` 时，马上继续执行
+- `Promise.race`：任何一个 promise 实例对象（不管是 `resolve` 还是 `reject`）只要状态变化，就会继续执行
 
