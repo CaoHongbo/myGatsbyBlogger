@@ -51,12 +51,23 @@ console.log('No.2');
  * No.3
  **/
 ```
-虽然上面没有任何异步的方法，都是同步的写法，但是 `resolve()` 是异步最后执行的，所以它不能处理同步的写法。这样有什么好处呢？举个例子，我们在写 Node.js 的时候可能会有大量计算的逻辑，为了不阻塞事件循环，可以使用 Promise 使同步变异步，让这个逻辑在事件循环的下一阶段执行，这样就可以达到我们的目的了
+虽然上面没有任何异步的方法，都是同步的写法，但是 `resolve()` 是异步最后执行的，所以它不能处理同步的写法。这样有什么好处呢？举个例子，我们在写 Node.js 的时候可能会有大量计算的逻辑，为了不阻塞事件循环，可以使用 Promise 使同步变异步，让这个逻辑在事件循环的<s>下一阶段</s>当前阶段最后执行，这样就可以达到我们的目的了
+
+那如何处理同步呢？可以使用 `Promise.try()`，让同步的方法同步执行，异步的方法异步执行
+
+---
+
+#### finally
+很好理解，不管 promise 实例的状态变成什么，都会执行
 
 ---
 
 #### Promise 静态方法
-Promise.resolve()
+Promise.resolve()：把参数变成 Promise 实例
+- 无参数
+- 参数是常量
+- promise 对象
+- thenable 对象 含有 `then` 方法的对象
 
 ```javascript
 // Promise.resolve() 相当于
@@ -66,6 +77,7 @@ new Promise((resolve, reject) => {
 ```
 
 Promise.reject()
+- 参数是啥，则 `then/catch` 里面函数的参数就是啥
 
 ```javascript
 // Promise.reject() 相当于
@@ -81,6 +93,7 @@ new Promise((resolve, reject) => {
 ---
 
 #### catch
+用 `catch` 捕获异常或错误，而不要用 `then` 来处理，因为 `then` 只能处理上一个 promise 的异常，不能处理当前 `then` 的异常，而且链式调用中，每个 `then` 里面都写的话也增加了很多代码量，所以说用 `catch` 方便又安全
 
 ---
 
