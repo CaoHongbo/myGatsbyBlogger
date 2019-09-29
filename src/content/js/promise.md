@@ -4,17 +4,17 @@ title: Promise 掏心掏肺教程
 image: ../img/promise.jpg
 author: 曹某某
 date: 2019-09-20 18:27:00
-draft: false
+draft: true
 tags:  
   - JavaScript
 ---
 
-#### 什么是 Promise?
-Promise 是 js 处理异步的一种主流方式，主要是改善变态的回调地狱式的开发，今天介绍一下 Promise 的使用方法和一些注意事项，它是一个状态机，有 3 种状态：`pending`、`fullfilled` 和 `rejected`，状态只能由 `pending` 变成 `fullfilled` 或者 `rejected`，下面结合 Node.js 有一个例子
+#### 什么是 Promise ?
+Promise 是 js 处理异步的一种主流方式，主要是改善变态的**回调地狱**式的开发，这篇文章不是基础教程，主要是介绍一些心得和注意事项，大部分都是干货；Promise 有 3 种状态：`pending`、`fullfilled` 和 `rejected`，状态只能由 `pending` 变成 `fullfilled/rejected`，一旦状态改变就不会再变，而且不受外部影响，下面结合 Node.js 有一个很简单的例子
 
 ```javascript
 const fs = require('fs');
-const promise = new Promise((resolve, reject) => {
+const promise = new Promise((resolve, reject) => { // promise一旦创建会立即执行
   fs.readFile('./main.js', (err, data) => {
     if(!err) resolve(data); // resolve: pending -> fullfilled
     else reject(err); // reject: pending -> rejected
@@ -28,7 +28,11 @@ promise.then((data) => {
 })
 ```
 
-`p2 resolve()` 参数是 promise 实例时，如果 `p1` 的状态是 `pending`，则会等待其状态改变；若其状态是 `fullfilled/rejected`，则 `p2` 状态会直接
+请看下面这个例子，`p2 resolve()` 参数是 promise 实例时
+
+1. 若 `p1` 的状态是 `pending`，则会等待其状态改变，然后执行下面的逻辑
+2. 若 `p1` 状态是 `fullfilled/rejected`，则 `p2` 状态会跟 `p1` 一样，并执行 `then/catch`
+
 ```javascript
 const p1 = new Promise(function (resolve, reject) {
   setTimeout(() => reject(new Error('fail')), 3000)
