@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 每天学点前端：行内元素和块级元素
-image: ../img/css3.jpg
+image: ../../img/css3.jpg
 author: 曹某某
 date: 2019-09-09 17:51:41
 tags: 

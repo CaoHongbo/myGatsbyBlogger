@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Promise 掏心掏肺教程
-image: ../img/promise.jpg
+image: ../../img/promise.jpg
 author: 曹某某
 date: 2019-09-20 18:27:00
 draft: true
