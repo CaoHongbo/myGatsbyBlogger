@@ -3,7 +3,7 @@
   "description": "Casper for gatsby",
   "version": "0.0.0",
   "private": true,
-  "author": "Scott Cooper <scttcper@gmail.com>",
+  "author": "CaoHongbo",
   "license": "MIT",
   "scripts": {
     "deploy": "gatsby clean && gatsby build && gh-pages -d public -b master -r git@git.dev.tencent.com:leechee/myGatsbyBlogger.git",
