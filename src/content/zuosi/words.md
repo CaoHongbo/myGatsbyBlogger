@@ -23,7 +23,6 @@ tags:
 - IaaS：基础设施服务，Infrastructure-As-A-Service 是云服务的最底层，主要提供一些基础资源
 - PaaS：平台服务，Platform-As-A-Service PaaS 提供软件部署平台（runtime），抽象掉了硬件和操作系统细节，可以无缝地扩展（scaling）。开发者只需要关注自己的业务逻辑，不需要关注底层
 - SaaS：软件服务，Software-As-A-Service SaaS 是软件的开发、管理、部署都交给第三方，不需要关心技术问题，可以拿来即用。普通用户接触到的互联网服务，几乎都是 SaaS
-
 - QPS：Query Per Second 单位时间内请求的数量
 - TPS：Transaction Per Second 单位时间内处理事务的数量，可能是多次请求，或者有一些其他的操作
 - ETL：Extract-Transform-Load 用来描述将数据从来源端经过抽取（extract）、转换（transform）、加载（load）至目的端的过程
