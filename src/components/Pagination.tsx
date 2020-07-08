@@ -56,9 +56,6 @@ const Pagination: React.FunctionComponent<PaginationProps> = ({ currentPage, num
   return (
     <nav
       css={navCss}
-      style={{
-        backgroundImage: `url('${'https://i.loli.net/2020/07/07/RjS9Lpuk16Gvhqs.png'}')`,
-      }}
     >
       <div>
         {!isFirst && (

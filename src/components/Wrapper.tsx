@@ -5,6 +5,7 @@ const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-image: url('https://i.loli.net/2020/07/07/RjS9Lpuk16Gvhqs.png')
 `;
 
 interface WrapperProps {

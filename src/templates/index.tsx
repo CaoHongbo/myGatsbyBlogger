@@ -158,9 +158,6 @@ const IndexPage: React.FC<IndexProps> = props => {
         <main
           id="site-main"
           css={[SiteMain, outer]}
-          style={{
-            backgroundImage: `url('${'https://i.loli.net/2020/07/07/RjS9Lpuk16Gvhqs.png'}')`,
-          }}
         >
           <div css={inner}>
             <div css={[PostFeed, PostFeedRaise]}>
